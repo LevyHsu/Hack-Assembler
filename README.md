@@ -1,7 +1,7 @@
 # Hack Assembler
 
-## A simple implementation of assembler for hack machine language in C++
-### Link: http://www.nand2tetris.org/06.php
+### A simple implementation of assembler for hack machine language in C++
+
 
 compile:
 ```bash
