@@ -187,8 +187,9 @@ bool instructions::is_symbol_A()
 
     // R0 - R15
     if (current_line[1]=='R' && isdigit(current_line[2]) )
-    {
-        //cout<<"R"<<endl;
+    {   
+        if(verbose)
+            cout<<"R"<<endl;
         current_type="R";
          return true;
     }
@@ -198,7 +199,8 @@ bool instructions::is_symbol_A()
     it = Predefined_Symbols.find(current_line.substr(1,current_line.length()-1));
     if (it != Predefined_Symbols.end())
     {
-        //cout<<"Predefined_Symbols"<<endl;
+        if(verbose)
+            cout<<"Predefined_Symbols"<<endl;
         current_type="Predefined_Symbols";
         return true;
     }
@@ -210,6 +212,8 @@ bool instructions::is_symbol_A()
             return false;
     }
     current_type="Variable_Symbols";
+    if(verbose)
+        cout<<"Variable_Symbols";
     return true;
 }
 
